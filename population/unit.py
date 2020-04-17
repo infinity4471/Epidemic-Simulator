@@ -3,13 +3,13 @@ from random import randrange, random
 import numpy as np
 from numpy.random import normal
 
-from .unit_data import POI_SIDE, POINT_RADIUS
+from .unit_data import POI_SIDE, POINT_RADIUS, dt
 from .quarantine import make_quarantine
 
 CHOICE_THRES = 0.01
 
 class unit:
-    def __init__( self, x, y, t = 0, r = 0, prob = ( 0, 0, 0 ), poi = [], test_mode = False ):
+    def __init__( self, x, y, t = None, r = None, prob = ( 0, 0, 0 ), poi = None, test_mode = False ):
         #prob[ 0 ] -> probability of infection
         #prob[ 1 ] -> probability of recovery
         #prob[ 2 ] -> probability of death
@@ -34,13 +34,13 @@ class unit:
         else:
             direction = randrange( 2 )
             if direction == 0:
-                self.x += np.sign( self.poi[ 0 ] - self.x ) * abs( normal( 0, 1 ) )
+                self.x += np.sign( self.poi[ 0 ] - self.x ) * abs( normal( 0, sqrt( dt ) ) )
             else:
-                self.y += np.sign( self.poi[ 1 ] - self.y ) * abs( normal( 0, 1 ) )
+                self.y += np.sign( self.poi[ 1 ] - self.y ) * abs( normal( 0, sqrt( dt ) ) )
 
     def random_walk( self, MIN_X, MAX_X, MIN_Y, MAX_Y ):
-        self.x += normal( 0, 1 )
-        self.y += normal( 0, 1 )
+        self.x += normal( 0, sqrt( dt ) )
+        self.y += normal( 0, sqrt( dt ) )
         self.x = min( MAX_X, self.x )
         self.x = max( MIN_X, self.x )
         self.y = min( MAX_Y, self.y )
