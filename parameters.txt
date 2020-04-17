@@ -1,0 +1,9 @@
+susceptible=100
+infected=5
+radius=4
+p_infect=0.7
+p_recover=0.001
+p_death=0.001
+poi_x=25
+poi_y=25
+tests=200
