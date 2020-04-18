@@ -36,7 +36,7 @@ In this mode we can specify an amount of available tests which we can do to the 
 
 No other particles can move into the quarantine and once a quarantined particle gets recovered they move out following their normal movement.
 
-[An example run with testing](./img/test_mode.png)
+[An example run with testing](./img/poi_test.png)
 
 Of course, the modes can be combined with each other at will.
 
