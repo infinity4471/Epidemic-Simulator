@@ -22,7 +22,7 @@ Once run the application generates a random population of particles on a grid. T
 
 Every infectious particle has a specific probability transmitting the infection and a radius of infection which specifies how close two particles have to be for the disease to be transmitted. Furthermore, every particle has a probability of recovering and a probability of dying.
 
-!(img/simple_mode.png "An example of the simple mode")
+![An example run of simple mode](./img/simple_mode.png)
 
 ## Advanced Mode 1 - Point of Interest
 
@@ -34,7 +34,7 @@ In this mode we can specify an amount of available tests which we can do to the 
 
 No other particles can move into the quarantine and once a quarantined particle gets recovered they move out following their normal movement.
 
-## :wrench: Set up and Using the Simulator
+## :wrench: Setting up and Using the Simulator
 
 You can download the repo locally by running:
 ```bash
@@ -53,15 +53,8 @@ The key can be any of the following:
 ```
 susceptible, infected, radius, p_infect, p_recover, p_death, poi_x, poi_y, tests
 ```
-An example of an input file can be:
-```
-susceptible=100
-infected=5
-radius=4
-p_infect=0.7
-p_recover=0.001
-p_death=0.001
-poi_x=25
-poi_y=25
-tests=200
-```
+An example of an input file can be found on parameters.txt
+
+## Statistical Data
+
+After every simulation the time series of each particle type are previewed in a graph as well as a bar diagram containing the amount of particles in each category at the end of the simulation.
