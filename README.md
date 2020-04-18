@@ -45,9 +45,9 @@ After that you can directly run the simulator by executing
 ```bash
 python3 -B main.py [filename]
 ```
-Where the [filename] can be any file in the following form:
+Where the [filename] can be any text file in which every line is of the following form:
 ```bash
-key:value
+key=value
 ```
 The key can be any of the following:
 ```
