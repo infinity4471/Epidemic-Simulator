@@ -20,7 +20,7 @@ def main( filename = sys.argv[ 1 ] ):
         N = [ int( parameters[ keys[ t ] ] ) for t in range( 2 ) ]
         radius = float( parameters[ keys[ 2 ] ] )
         probs = [ float( parameters[ keys[ t ] ] ) for t in range( 3, 6 ) ]
-        poi, tests = None, None
+        poi, tests = None, 0
         if keys[ 6 ] in parameters.keys() and keys[ 7 ] in parameters.keys():
             poi = [ float( parameters[ keys[ 6 ] ] ), float( parameters[ keys[ 7 ] ] ) ]
         if keys[ 8 ] in parameters.keys():

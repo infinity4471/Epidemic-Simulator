@@ -1,2 +1,3 @@
 POI_SIDE = 10
 POINT_RADIUS = 4
+dt = 0.1
