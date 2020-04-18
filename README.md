@@ -22,6 +22,8 @@ Once run the application generates a random population of particles on a grid. T
 
 Every infectious particle has a specific probability transmitting the infection and a radius of infection which specifies how close two particles have to be for the disease to be transmitted. Furthermore, every particle has a probability of recovering and a probability of dying.
 
+!(img/simple_mode.png "An example of the simple mode")
+
 ## Advanced Mode 1 - Point of Interest
 
 In order to better capture some trends we have included a mode where a point of interest is specified. The point of interest is a square of standard side but its center can be modified to be anywhere on the grid. If the point of interest (POI) is specified every particle will move at random times towards it.
@@ -50,3 +52,17 @@ key:value
 The key can be any of the following:
 ```
 susceptible, infected, radius, p_infect, p_recover, p_death, poi_x, poi_y, tests
+```
+An example of an input file can be:
+```
+susceptible=100
+infected=5
+radius=4
+p_infect=0.7
+p_recover=0.001
+p_death=0.001
+poi_x=25
+poi_y=25
+tests=200
+```
+
