@@ -15,7 +15,7 @@ TEST_RATE = 20
 # units[ 4 ] -> ( optional ) tested/quarantined
 
 class population:
-    def __init__( self, N, radius, prob, poi = None, tests = None, RANGE_X = 100, RANGE_Y = 100 ):
+    def __init__( self, N, radius, prob, poi = None, tests = 0, RANGE_X = 100, RANGE_Y = 100 ):
         self.units = [ [] for _ in range( len( types ) ) ]
         self.ntypes = len( types ) - 1
         self.size = sum( N )
